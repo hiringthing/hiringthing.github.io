@@ -16,7 +16,13 @@
     <script type="text/javascript">
       const iframe = document.getElementById('subject_iframe');
       const params = new URLSearchParams(window.location.search);
-      iframe.src = params.get("iframe_src");
+
+      // dynamically assign query params to the iframe, like `?iframe_src=https://example.com`
+      params.keys().filter(k => k.startsWith('iframe_')).forEach(key => {
+        const attribute = key.split('_')[1];
+        const value = params[key];
+        iframe[attribute] = value;
+      })
     </script>
   </body>
 </html>

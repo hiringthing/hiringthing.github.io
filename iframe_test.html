@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HiringThing Iframe Test Page</title>
+    <meta name="description" content="HiringThing Iframe Test Page">
+  </head>
+  <body> 
+    <iframe id="subject_iframe" src></iframe>
+    <script type="text/javascript">
+      const iframe = document.getElementById('subject_iframe');
+      const params = new URLSearchParams(window.location.search);
+      iframe.src = params.get("iframe_src");
+    </script>
+  </body>
+</html>

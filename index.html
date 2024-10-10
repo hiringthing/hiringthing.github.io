@@ -5,14 +5,19 @@
     <title>HiringThing Iframe Test Page</title>
     <meta name="description" content="HiringThing Iframe Test Page">
     <style type="text/css">
+      #wrapper {
+        width: 100%;
+        width: 100%;
+        margin: 40px 10px 10px 10px;
+      }
       #subject_iframe {
-        width: -moz-available;
-        width: -webkit-fill-available;
+        width: 100%;
+        height: 100%;
       }
     </style>
   </head>
   <body> 
-    <iframe id="subject_iframe" src></iframe>
+    <div id="wrapper"><iframe id="subject_iframe" src></iframe></div>
     <script type="text/javascript">
       const iframe = document.getElementById('subject_iframe');
       const params = new URLSearchParams(window.location.search);

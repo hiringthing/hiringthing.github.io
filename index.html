@@ -26,7 +26,7 @@
       // dynamically assign query params to the iframe, like `?iframe_src=https://example.com`
       params.keys().filter(k => k.startsWith('iframe_')).forEach(key => {
         const attribute = key.split('_')[1];
-        const value = params[key];
+        const value = params.get(key);
         iframe[attribute] = value;
       })
     </script>

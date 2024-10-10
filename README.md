@@ -2,4 +2,6 @@
 Public testing assets
 
 
-You can visit https://hiringthing.github.io/iframe_test_harness?iframe_src=[the url you want to iframe] to test an arbitrary page in an iframe.  Note that this only supports our private labels that allow iframing.
+You can visit https://hiringthing.github.io/iframe_test_harness to test an arbitrary page in an iframe.
+
+Pass the url you want to test as the `iframe_src` param like so: `https://hiringthing.github.io/iframe_test_harness?iframe_src=https://arrow-technologies.prismhr-hire.com`.  Note that this tool only supports our private labels that allow iframing.
